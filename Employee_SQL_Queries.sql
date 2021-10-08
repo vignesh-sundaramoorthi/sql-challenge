@@ -8,7 +8,7 @@ DROP TABLE IF EXISTS employees;
 DROP TABLE IF EXISTS salaries;
 DROP TABLE IF EXISTS titles;
 
---Create tables by copying the code from the quickdbdiagram sql files 
+--Create tables by copying the code from the quickdbdiagram sql site
 CREATE TABLE departments (
     dept_no varchar  NOT NULL,
     dept_name varchar  NOT NULL,
