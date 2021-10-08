@@ -36,11 +36,11 @@ CREATE TABLE dept_manager (
 CREATE TABLE employees (
     emp_no int   NOT NULL,
     emp_title varchar   NOT NULL,
-    birth_date varchar   NOT NULL,
+    birth_date date   NOT NULL,
     first_name varchar   NOT NULL,
     last_name varchar   NOT NULL,
     sex varchar   NOT NULL,
-    hire_date varchar   NOT NULL,
+    hire_date date   NOT NULL,
     CONSTRAINT pk_employees PRIMARY KEY (
         emp_no
      )
@@ -110,7 +110,7 @@ ORDER BY hire_date;
 --department number, department name, the manager's employee number, 
 --last name, first name.
 
-SELECT d.dept_no, d.dept_name, dm.emp_no, e.last_name, e.last_name
+SELECT d.dept_no, d.dept_name, dm.emp_no, e.last_name, e.first_name
 FROM departments as d
 		INNER JOIN dept_manager as dm
 		ON d.dept_no = dm.dept_no
